@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Odin Navigation Stack: Empowering Robots with Advanced Navigation Capabilities through SLAM, End-to-End Planning, and Vision-Language Model.">
+  <meta name="keywords" content="Odin1, Navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Odin Navigation Stack</title>
+
+
+  <meta property="og:title" content="Odin Navigation Stack" />
+  <meta property="og:description"
+    content="Odin Navigation Stack: Empowering Robots with Advanced Navigation Capabilities through SLAM, End-to-End Planning, and Vision-Language Model." />
+  <!-- MathJax library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TSQGH8Q0WV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TSQGH8Q0WV');
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-4 publication-title" style="font-size: 2rem;">Odin Navigation Stack</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://www.3dmanifold.com/">Manifold Tech</a>
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/ManifoldTehLtd/Odin-Nav-Stack" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Video Link -->
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=Z02Q8wAkIxk&t=7s"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://www.bilibili.com/video/BV1rZT6znEaT/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-bilibili"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <style>
+    .video-border {
+      display: inline-block;
+      padding: 2px;
+      /* adjust thickness of your 'border' */
+      border-radius: 4px;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      /* try different gradient colors */
+    }
+
+    .video-border video {
+      display: block;
+      border: none;
+      border-radius: 4px;
+      /* match the wrapper for a consistent look */
+    }
+  </style>
+
+  <style>
+    #teaser-video {
+      max-width: 85%;
+      margin: 0 auto;
+      display: block;
+      border: none;
+      /* remove the solid border */
+      border-radius: 4px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    #architecture-img {
+      width: 90%;
+      margin: 0 auto;
+      display: block;
+      border: none;
+      border-radius: 0;
+      /* removed border radius */
+      box-shadow: none;
+      /* removed box shadow */
+    }
+
+    /* Enhanced style to further reduce space between buttons and teaser video */
+    .hero.teaser {
+      padding-top: 0;
+      margin-top: -3rem;
+      /* Added negative margin to pull the teaser section up */
+    }
+
+    .hero.teaser .hero-body {
+      padding-top: 0;
+      /* Reduced from 1rem to 0 */
+    }
+  </style>
+  <section class="Odin1 video">
+    <div class="container is-max-desktop">
+      <div class="video-body">
+        <iframe id="teaser-video" width="100%" style="aspect-ratio: 16 / 9;"
+          src="https://www.youtube.com/embed/Z02Q8wAkIxk?start=7&autoplay=1&mute=1&loop=1" title="Odin1 video"
+          frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        <h2 class="subtitle" style="text-align: center;"></h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Odin1 On-Robot Gallery -->
+  <section class="section" id="Odin1OnRobot">
+    <div class="container is-centered has-text-centered">
+      <h2 class="title is-4" style="font-weight: 700;">Odin1 On-Robot</h2>
+
+      <style>
+        .odin-gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+
+        @media (max-width: 992px) {
+          .odin-gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 576px) {
+          .odin-gallery-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .odin-thumb {
+          position: relative;
+          overflow: hidden;
+          border-radius: 6px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+          cursor: pointer;
+          background: #f7f7f7;
+        }
+
+        .odin-thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.35s ease;
+          display: block;
+        }
+
+        .odin-thumb:hover img {
+          transform: scale(1.05);
+        }
+
+        /* Lightbox */
+        .odin-lightbox {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.8);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+        }
+
+        .odin-lightbox.open {
+          display: flex;
+        }
+
+        .odin-lightbox img {
+          max-width: 90vw;
+          max-height: 85vh;
+          border-radius: 6px;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+        }
+
+        .odin-lightbox .controls {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 16px;
+        }
+
+        .odin-lightbox .ctrl-btn {
+          background: rgba(255, 255, 255, 0.85);
+          border: none;
+          border-radius: 999px;
+          width: 42px;
+          height: 42px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          font-size: 18px;
+        }
+
+        .odin-lightbox .close-btn {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+        }
+      </style>
+
+      <div class="odin-gallery-grid" id="odin-gallery"></div>
+
+      <div class="odin-lightbox" id="odin-lightbox" aria-hidden="true">
+        <button class="ctrl-btn close-btn" id="odin-close" aria-label="Close">✕</button>
+        <div class="controls">
+          <button class="ctrl-btn" id="odin-prev" aria-label="Previous">‹</button>
+          <button class="ctrl-btn" id="odin-next" aria-label="Next">›</button>
+        </div>
+        <img id="odin-lightbox-img" alt="Odin gallery image">
+      </div>
+
+      <script>
+        const odinImages = [
+          'go2.jpg',
+          'odin_bilibili.jpg',
+          'uav1.jpg',
+          'uav2.jpg',
+          'human.jpg',
+          'wheelleg.jpg'
+        ];
+
+        const BASE_PATH = './resources/images/';
+
+        const galleryRoot = document.getElementById('odin-gallery');
+        const lightbox = document.getElementById('odin-lightbox');
+        const lightboxImg = document.getElementById('odin-lightbox-img');
+        const btnPrev = document.getElementById('odin-prev');
+        const btnNext = document.getElementById('odin-next');
+        const btnClose = document.getElementById('odin-close');
+        let currentIndex = -1;
+
+        function buildGallery() {
+          galleryRoot.innerHTML = '';
+          odinImages.forEach((name, idx) => {
+            const src = `${BASE_PATH}${name}`;
+            const div = document.createElement('div');
+            div.className = 'odin-thumb';
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = name;
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            // Fallback to odinonrobot folder if images folder path fails
+            img.onerror = () => { img.onerror = null; img.src = `./resources/odinonrobot/${name}`; };
+            div.appendChild(img);
+            div.addEventListener('click', () => openLightbox(idx));
+            galleryRoot.appendChild(div);
+          });
+        }
+
+        function openLightbox(idx) {
+          if (idx < 0 || idx >= odinImages.length) return;
+          currentIndex = idx;
+          lightboxImg.src = `${BASE_PATH}${odinImages[currentIndex]}`;
+          lightboxImg.onerror = () => { lightboxImg.onerror = null; lightboxImg.src = `./resources/odinonrobot/${odinImages[currentIndex]}`; };
+          lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden', 'false');
+        }
+        function closeLightbox() {
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden', 'true');
+        }
+        function showPrev() { if (odinImages.length) openLightbox((currentIndex - 1 + odinImages.length) % odinImages.length); }
+        function showNext() { if (odinImages.length) openLightbox((currentIndex + 1) % odinImages.length); }
+
+        btnPrev.addEventListener('click', showPrev);
+        btnNext.addEventListener('click', showNext);
+        btnClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', (e) => {
+          if (!lightbox.classList.contains('open')) return;
+          if (e.key === 'Escape') closeLightbox();
+          else if (e.key === 'ArrowLeft') showPrev();
+          else if (e.key === 'ArrowRight') showNext();
+        });
+
+        // Initialize
+        buildGallery();
+      </script>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <h2 class="title is-4" style="font-weight: 700;">Working with Odin1</h2>
+          <div class="content has-text-centered">
+            <style>
+              .method-intro {
+                margin-bottom: 1.5rem;
+              }
+
+              .method-section {
+                margin: 1.25rem 0;
+              }
+
+              .method-section h4 {
+                margin: 0 0 0.5rem;
+              }
+
+              .method-section ul {
+                display: inline-block;
+                text-align: left;
+              }
+            </style>
+
+            <p class="method-intro">This project showcases multiple demo pipelines built on Odin1. Each demo can be used
+              independently or combined as an integrated stack.</p>
+
+            <div class="method-section">
+              <div style="text-align:center;">
+                <h4>SLAM</h4>
+              </div>
+              <p>Build 3D maps for fast, persistent relocalization, providing positioning anchors for navigation.</p>
+            </div>
+
+            <div class="odin-model-switcher">
+              <button class="odin-model-switch-btn" type="button" data-dir="-1" aria-label="Previous model">‹</button>
+              <div class="model-viewer-container">
+                <model-viewer id="recon" src="resources/models/huide1213.glb" alt="3D Model" loading="eager"
+                  touch-action="pan-y" environment-image="legacy" zoom-sensitivity="1.0" camera-controls disable-tap
+                  min-camera-orbit="auto auto 1m" max-camera-orbit="auto auto 200m" interaction-prompt="none"
+                  shadow-intensity="0" ar disable-shadow ar-modes="webxr scene-viewer quick-look"
+                  style="width: 90%; height: 90%; background: #ffffff; margin: 0 auto;">
+                </model-viewer>
+              </div>
+              <button class="odin-model-switch-btn" type="button" data-dir="1" aria-label="Next model">›</button>
+            </div>
+            <script>
+              (function () {
+                const models = [
+                  { src: 'resources/models/huide1213.glb', orbit: '0deg 90deg auto' },
+                  { src: 'resources/models/factory.glb', orbit: '0deg 90deg auto' },
+                  { src: 'resources/models/factory2.glb', orbit: '0deg 90deg 100m' },
+                ];
+                let index = 0;
+                const viewer = document.getElementById('recon');
+                const buttons = document.querySelectorAll('.odin-model-switch-btn');
+                function update() {
+                  const current = models[index];
+                  viewer.setAttribute('src', current.src);
+                  viewer.cameraOrbit = current.orbit;
+                  if (viewer.resetTurntableRotation) viewer.resetTurntableRotation(0);
+                  viewer.jumpCameraToGoal();
+                }
+                buttons.forEach(btn => btn.addEventListener('click', () => {
+                  index = (index + Number(btn.dataset.dir) + models.length) % models.length;
+                  update();
+                }));
+                update();
+              }());
+            </script>
+            <style>
+              .odin-model-switcher {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                justify-content: center;
+              }
+
+              .odin-model-switch-btn {
+                border: none;
+                border-radius: 999px;
+                width: 2.75rem;
+                height: 2.75rem;
+                font-size: 1.5rem;
+                font-weight: 600;
+                background: #1f2933;
+                color: #fff;
+                cursor: pointer;
+                transition: transform 0.2s ease, background 0.2s ease;
+              }
+
+              .odin-model-switch-btn:hover {
+                background: #0f172a;
+                transform: scale(1.05);
+              }
+            </style>
+
+            <div class="method-section">
+              <div style="text-align:center;">
+                <h4>Navigation</h4>
+              </div>
+              <p> </p>
+              <p>Two navigation stacks address different requirements across various scenarios:
+              </p>
+              <ul>
+                <li>Modified ROS Navigation Stack</li>
+                <li>End-to-End Local Planning</li>
+              </ul>
+            </div>
+
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <video id="teaser-video" autoplay muted loop playsinline height="100%">
+                  <source src="./resources/videos/Nav.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle" style="text-align: center;"></h2>
+              </div>
+            </div>
+
+            <div class="method-section">
+              <div style="text-align:center;">
+                <h4>Object Navigation</h4>
+              </div>
+              <p>Detect objects and generate navigation goals using concise text or voice commands.</p>
+            </div>
+
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <video id="teaser-video" autoplay muted loop playsinline height="100%">
+                  <source src="./resources/videos/ObjNav.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle" style="text-align: center;"></h2>
+              </div>
+            </div>
+
+            <div class="method-section">
+              <div style="text-align:center;">
+                <h4>VLM Scene Understanding</h4>
+              </div>
+              <p>Provides vision-language model scene understanding and description.</p>
+            </div>
+
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <video id="teaser-video" autoplay muted loop playsinline height="100%">
+                  <source src="./resources/videos/VLM.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle" style="text-align: center;"></h2>
+              </div>
+            </div>
+
+            <div class="method-section">
+              <div style="text-align:center;">
+                <h4>VLN</h4>
+              </div>
+              <p>Enables online vision-language navigation for object tracking.</p>
+            </div>
+
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <video id="teaser-video" autoplay muted loop playsinline height="100%">
+                  <source src="./resources/videos/VLN.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle" style="text-align: center;"></h2>
+              </div>
+            </div>
+
+            <div class="method-section">
+              <div style="text-align:center;">
+                <h4>More Exciting Features in Development</h4>
+              </div>
+              <p>We're actively expanding Odin1's capabilities with experimental modules—ranging from multi-floor
+                navigation and human-aware motion planning to on-device large language model (LLM) agents for autonomous
+                task reasoning. Stay tuned for updates!</p>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="Acknowledgements" style="padding-top: 0rem;">
+    <div class="container is-max-desktop content">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-4" style="font-weight: 700;">Acknowledgements</h2>
+        <p>
+          Thanks to the excellent work by <a href="https://github.com/ros-planning/navigation" target="_blank"
+            rel="noopener">ROS Navigation</a>, <a href="https://github.com/hanruihua/NeuPAN" target="_blank"
+            rel="noopener">NeuPAN</a>, <a href="https://github.com/ultralytics/ultralytics" target="_blank"
+            rel="noopener">Ultralytics YOLO</a> and <a href="https://github.com/QwenLM/Qwen3-VL" target="_blank"
+            rel="noopener">Qwen</a>.
+        </p>
+        <p>
+          Special thanks to <a href="https://github.com/hanruihua" target="_blank" rel="noopener">hanruihua</a>, <a
+            href="https://github.com/KevinLADLee" target="_blank" rel="noopener">KevinLADLee</a> and <a
+            href="https://github.com/bearswang" target="_blank" rel="noopener">bearswang</a> for their technical
+          support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="License" style="padding-top: 0rem;">
+    <div class="container is-max-desktop content">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-4" style="font-weight: 700;">License</h2>
+        <p>
+          All code is released under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"
+            rel="noopener">Apache v2.0</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This webpage template is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+              under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
