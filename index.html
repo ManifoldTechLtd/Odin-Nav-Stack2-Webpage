@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-4 publication-title" style="font-size: 2rem;">Odin Navigation Stack</h1>
+            <h1 class="title is-4 publication-title" style="font-size: 2rem;">Odin Navigation Stack 2</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://www.3dmanifold.com/">Manifold Tech</a>
@@ -159,6 +159,217 @@
           frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen>
         </iframe>
         <h2 class="subtitle" style="text-align: center;"></h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's New in ONS2 -->
+  <section class="section" id="WhatsNew" style="padding-top: 1rem; padding-bottom: 0;">
+    <div class="container is-max-desktop">
+      <style>
+        .whatsnew-head {
+          text-align: center;
+          margin-bottom: 1.75rem;
+        }
+
+        .whatsnew-version {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-bottom: 0.85rem;
+          padding: 0.2rem 0.3rem 0.2rem 0.75rem;
+          border-radius: 999px;
+          border: 1px solid #e4e9ef;
+          background: #f7f9fb;
+          font-family: 'Google Sans', sans-serif;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .whatsnew-version-old {
+          color: #9aa5b1;
+        }
+
+        .whatsnew-version i {
+          font-size: 0.62rem;
+          color: #c4cdd5;
+        }
+
+        .whatsnew-version-new {
+          padding: 0.15rem 0.55rem;
+          border-radius: 999px;
+          color: #fff;
+          background: linear-gradient(135deg, #1f2933, #3d5a80);
+        }
+
+        .whatsnew-sub {
+          margin: 0;
+          font-size: 0.92rem;
+          color: #52606d;
+        }
+
+        .whatsnew-card {
+          max-width: 85%;
+          margin: 0 auto;
+          padding: 0.35rem 1.75rem;
+          background: #fff;
+          border-radius: 4px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .whatsnew-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .whatsnew-item {
+          display: flex;
+          gap: 1rem;
+          align-items: flex-start;
+          padding: 1.15rem 0;
+          text-align: left;
+        }
+
+        .whatsnew-item:nth-child(odd) {
+          padding-right: 1.5rem;
+          border-right: 1px solid #eef1f4;
+        }
+
+        .whatsnew-item:nth-child(even) {
+          padding-left: 1.5rem;
+        }
+
+        .whatsnew-item:nth-child(-n + 4) {
+          border-bottom: 1px solid #eef1f4;
+        }
+
+        .whatsnew-icon {
+          flex: 0 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2.3rem;
+          height: 2.3rem;
+          border-radius: 8px;
+          font-size: 0.95rem;
+          color: #fff;
+          background: linear-gradient(135deg, #3d5a80, #98c1d9);
+        }
+
+        .whatsnew-item h3 {
+          margin: 0 0 0.2rem;
+          font-family: 'Google Sans', sans-serif;
+          font-size: 0.98rem;
+          font-weight: 700;
+          line-height: 1.35;
+          color: #1f2933;
+        }
+
+        .whatsnew-item p {
+          margin: 0;
+          font-size: 0.87rem;
+          line-height: 1.55;
+          color: #52606d;
+        }
+
+        @media (max-width: 768px) {
+          .whatsnew-card {
+            max-width: 100%;
+            padding: 0.35rem 1.1rem;
+          }
+
+          .whatsnew-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .whatsnew-item:nth-child(odd) {
+            padding-right: 0;
+            border-right: none;
+          }
+
+          .whatsnew-item:nth-child(even) {
+            padding-left: 0;
+          }
+
+          .whatsnew-item:nth-child(-n + 5) {
+            border-bottom: 1px solid #eef1f4;
+          }
+
+          .whatsnew-item:last-child {
+            border-bottom: none;
+          }
+        }
+      </style>
+
+      <div class="whatsnew-head">
+        <div class="whatsnew-version">
+          <span class="whatsnew-version-old">ONS1</span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          <span class="whatsnew-version-new">ONS2</span>
+        </div>
+        <h2 class="title is-4" style="font-weight: 700;">What's New in ONS2</h2>
+        <p class="whatsnew-sub">Upgrades that take the Odin Navigation Stack beyond ONS1.</p>
+      </div>
+
+      <div class="whatsnew-card">
+        <div class="whatsnew-grid">
+          <div class="whatsnew-item">
+            <div class="whatsnew-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+            <div>
+              <h3>Dramatically faster planning</h3>
+              <p>Plans substantially faster even on low-compute platforms, with smoother execution and nimbler obstacle
+                avoidance.</p>
+            </div>
+          </div>
+
+          <div class="whatsnew-item">
+            <div class="whatsnew-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+            <div>
+              <h3>Upgraded VLM, bring your own model</h3>
+              <p>Connect a more capable vision-language model to your own workstation for richer scene understanding.
+              </p>
+            </div>
+          </div>
+
+          <div class="whatsnew-item">
+            <div class="whatsnew-icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></div>
+            <div>
+              <h3>Built for industrial inspection</h3>
+              <p>Extensive optimizations tuned to real industrial inspection scenarios and long patrol routes.</p>
+            </div>
+          </div>
+
+          <div class="whatsnew-item">
+            <div class="whatsnew-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
+            <div>
+              <h3>End-to-end, fully open source</h3>
+              <p>A complete inspection workflow — simulation to real robots, algorithms to the monitoring platform.
+                See the <a href="https://github.com/ManifoldTechLtd/MT-Real2Sim-Tutorial" target="_blank"
+                  rel="noopener">Real2Sim tutorial</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- 双等级的监控终端。放一个开源的韩队的那个gif，放一个我们高级版的终端来总哪个。 -->
+
+          <div class="whatsnew-item">
+            <div class="whatsnew-icon"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i></div>
+            <div>
+              <h3>Plugin architecture</h3>
+              <p>The stack is built around a plugin-based design, making it straightforward to integrate custom
+                planners.</p>
+            </div>
+          </div>
+
+          <div class="whatsnew-item">
+            <div class="whatsnew-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
+            <div>
+              <h3>More on the way</h3>
+              <p>Further capabilities will land in upcoming releases.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -449,35 +660,30 @@
               <div style="text-align:center;">
                 <h4>Navigation</h4>
               </div>
-              <p> </p>
-              <p>Two navigation stacks address different requirements across various scenarios:
-              </p>
-              <ul>
-                <li>Modified ROS Navigation Stack</li>
-                <li>End-to-End Local Planning</li>
-              </ul>
             </div>
 
             <div class="container is-max-desktop">
-              <div class="hero-body">
-                <video id="NavVideo" class="teaser-video" autoplay muted loop playsinline height="100%">
-                  <source src="./resources/videos/Nav.mp4" type="video/mp4">
+              <div class="hero-body" style="padding-top: 0.75rem;">
+                <p>Long-range navigation through complex skybridges connecting multiple buildings: one complete round trip of about 640 m, with ONS 2 maintaining precise localization and stable online navigation, free of localization drift or map misalignment.</p>
+                <video id="LongNavVideo" class="teaser-video" autoplay muted loop playsinline height="100%">
+                  <source src="./resources/videos/LongNav.mp4" type="video/mp4">
                 </video>
-                <h2 class="subtitle" style="text-align: center;"></h2>
               </div>
             </div>
-
             <div class="method-section">
               <div style="text-align:center;">
-                <h4>Object Navigation</h4>
+                <h4>Real-to-Isaac Sim Simulation Navigation</h4>
               </div>
-              <p>Detect objects and generate navigation goals using concise text or voice commands.</p>
+              <p>Replicate real-world environments in Isaac Sim using <a href="https://www.manifoldtech.cn/products/q9000"
+                  target="_blank" rel="noopener">Q9000</a> or <a href="https://www.manifoldtech.cn/products/odin1"
+                  target="_blank" rel="noopener">odin1</a> collected data, import robot models (e.g., URDF), and
+                perform navigation and manipulation tasks in a simulated setting.</p>
             </div>
 
             <div class="container is-max-desktop">
               <div class="hero-body">
-                <video id="ObjNavVideo" class="teaser-video" autoplay muted loop playsinline height="100%">
-                  <source src="./resources/videos/ObjNav.mp4" type="video/mp4">
+                <video id="R2SVideo" class="teaser-video" autoplay muted loop playsinline height="100%">
+                  <source src="./resources/videos/r2s.mp4" type="video/mp4">
                 </video>
                 <h2 class="subtitle" style="text-align: center;"></h2>
               </div>
@@ -519,9 +725,8 @@
               <div style="text-align:center;">
                 <h4>More Exciting Features in Development</h4>
               </div>
-              <p>We're actively expanding Odin1's capabilities with experimental modules—ranging from multi-floor
-                navigation and human-aware motion planning to on-device large language model (LLM) agents for autonomous
-                task reasoning. Stay tuned for updates!</p>
+              <p>ONS2 keeps growing. Beyond this release, we are actively developing experimental modules—including
+                multi-floor navigation and human-aware motion planning. Stay tuned for updates!</p>
             </div>
           </div>
           <br>
@@ -556,8 +761,8 @@
       <div class="column is-full-width has-text-centered">
         <h2 class="title is-4" style="font-weight: 700;">License</h2>
         <p>
-          All code is released under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"
-            rel="noopener">Apache v2.0</a>.
+          All code is released under the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank"
+            rel="noopener">GNU GPL v3.0</a>.
         </p>
       </div>
     </div>
