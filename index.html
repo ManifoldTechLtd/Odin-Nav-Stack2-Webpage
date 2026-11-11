@@ -655,6 +655,18 @@
           color: #69788D;
         }
 
+        .workflow-subhead {
+          margin: 2.5rem 0 1rem;
+          text-align: center;
+        }
+
+        .workflow-arch-img {
+          display: block;
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+
         @media (max-width: 768px) {
           .workflow-wrap {
             width: 94vw;
@@ -665,6 +677,10 @@
           }
 
           .workflow-card object {
+            min-width: 900px;
+          }
+
+          .workflow-arch-img {
             min-width: 900px;
           }
         }
@@ -679,9 +695,23 @@
             alt="ManifoldTech workflow diagram: mapping, navigation and simulation">
         </object>
       </div>
-      <p class="workflow-caption">Figure: end-to-end workflow from site capture to ONS2 deployment.</p>
+      <p class="workflow-caption">Figure 1: end-to-end workflow from site capture to ONS2 deployment.</p>
       <a class="workflow-open" href="./resources/images/q9000-workflow.svg" target="_blank" rel="noopener">Open
         full-size diagram ↗</a>
+
+      <h4 class="workflow-subhead">System Architecture</h4>
+      <p class="workflow-intro">Inside ONS2, four layers stay decoupled: a unified robot profile, an ego-centric
+        perception backbone, a three-slot planning stack, and a chassis bridge with inspection tooling—all on a
+        symmetric ROS 1 / ROS 2 runtime.</p>
+      <div class="workflow-card">
+        <img class="workflow-arch-img" src="./resources/images/ons2_architecture.png"
+          alt="ONS2 system architecture: inputs and profile, perception backbone, pluggable planning stack, execution and ecosystem"
+          loading="lazy" decoding="async">
+      </div>
+      <p class="workflow-caption">Figure 2: ONS2 system architecture—unified robot profile, ego-centric perception,
+        pluggable planners, and execution ecosystem.</p>
+      <a class="workflow-open" href="./resources/images/ons2_architecture.png" target="_blank" rel="noopener">Open
+        full-size image ↗</a>
     </div>
   </section>
 
