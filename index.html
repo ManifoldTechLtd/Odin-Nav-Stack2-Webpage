@@ -525,10 +525,10 @@
               <div style="text-align:center;">
                 <h4>Real-to-Isaac Sim Simulation Navigation</h4>
               </div>
-              <p>Replicate real-world environments in Isaac Sim using <a href="https://www.manifoldtech.cn/products/q9000"
+              <p>Replicate real-world sites in Isaac Sim from <a href="https://www.manifoldtech.cn/products/q9000"
                   target="_blank" rel="noopener">Q9000</a> or <a href="https://www.manifoldtech.cn/products/odin1"
-                  target="_blank" rel="noopener">odin1</a> collected data, import robot models (e.g., URDF), and
-                perform navigation and manipulation tasks in a simulated setting.</p>
+                  target="_blank" rel="noopener">Odin1</a> scans, import robot models (e.g., URDF), and run
+                navigation and manipulation tasks.</p>
             </div>
 
             <div class="container is-max-desktop">
@@ -547,7 +547,8 @@
                 <h4>Navigation in 3DGS Reconstructed Scenes</h4>
               </div>
               <p>Built from <a href="https://www.manifoldtech.cn/products/q9000" target="_blank"
-                  rel="noopener">Q9000</a>-scanned 3DGS maps, the ONS 2 dashboard also runs in photorealistic indoor
+                  rel="noopener">Q9000</a>- or <a href="https://www.manifoldtech.cn/products/odin1" target="_blank"
+                  rel="noopener">Odin1</a>-scanned 3DGS maps, the ONS 2 dashboard also runs in photorealistic indoor
                 scenes: move the viewpoint freely and dispatch virtual robots to navigate.</p>
             </div>
 
@@ -689,9 +690,8 @@
           }
         }
       </style>
-      <p class="workflow-intro">Q9000 captures the site as a single .lx project. MindCloud processes it and exports
-        three branches: .pcd/.bin point clouds for grid-map generation, 3DGS for a live web dashboard, and 3DGS/Mesh
-        for Isaac Sim. Together they cover navigation, live monitoring, and simulation-based validation for ONS2.</p>
+      <p class="workflow-intro">Q9000 (.lx) or Odin1 (.bin) captures the site; MindCloud exports three branches—navigation
+        maps, a live 3DGS dashboard, and Isaac Sim scenes—for ONS2 navigation, monitoring, and validation.</p>
       <div class="workflow-card">
         <object type="image/svg+xml" data="./resources/images/q9000-workflow.svg"
           aria-label="ManifoldTech workflow diagram: mapping, navigation and simulation">
