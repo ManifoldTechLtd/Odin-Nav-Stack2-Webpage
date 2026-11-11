@@ -163,6 +163,76 @@
     </div>
   </section>
 
+  <!-- ONS2 overview and demo index -->
+  <section class="section" id="Overview" style="padding-top: 2.5rem; padding-bottom: 0.5rem;">
+    <div class="container is-max-desktop has-text-centered">
+      <style>
+        .ons2-intro {
+          max-width: 780px;
+          margin: 0 auto 1.25rem;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 1.6;
+          color: #4a4a4a;
+        }
+
+        .ons2-index {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: baseline;
+          gap: 0.5rem 1.6rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .ons2-index a {
+          display: inline-flex;
+          align-items: baseline;
+          gap: 0.4rem;
+          color: #1f2933;
+          font-size: 0.92rem;
+          font-weight: 600;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+
+        .ons2-index a:hover {
+          color: #2563eb;
+        }
+
+        .ons2-index .idx {
+          font-family: 'Noto Sans Mono', monospace;
+          font-size: 0.72rem;
+          font-weight: 700;
+          color: #9aa5b1;
+        }
+
+        [id^="demo-"] {
+          scroll-margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+          .ons2-index {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.45rem;
+          }
+        }
+      </style>
+      <h2 class="title is-4" style="font-weight: 700;">ONS2 Overview</h2>
+      <p class="ons2-intro">Built on the Odin1 (Odin's Eye) spatial memory module, ONS2 is an open-source, pluggable
+        navigation stack for industrial inspection—covering mapping, localization, planning, and execution, with live
+        3DGS monitoring.</p>
+      <nav class="ons2-index" aria-label="ONS2 demos">
+        <a href="#demo-slam"><span class="idx">01</span>SLAM</a>
+        <a href="#demo-navigation"><span class="idx">02</span>Navigation</a>
+        <a href="#demo-real2sim"><span class="idx">03</span>Real-to-Sim Navigation</a>
+        <a href="#demo-3dgs"><span class="idx">04</span>3DGS Monitoring Dashboard</a>
+      </nav>
+    </div>
+  </section>
+
   <!-- What's New in ONS2 -->
   <section class="section" id="WhatsNew" style="padding-top: 1rem; padding-bottom: 0;">
     <div class="container is-max-desktop">
@@ -266,6 +336,14 @@
           color: #1f2933;
         }
 
+        .whatsnew-index {
+          margin-right: 0.45rem;
+          font-family: 'Noto Sans Mono', monospace;
+          font-size: 0.75rem;
+          font-weight: 700;
+          color: #9aa5b1;
+        }
+
         .whatsnew-item p {
           margin: 0;
           font-size: 0.87rem;
@@ -317,7 +395,7 @@
           <div class="whatsnew-item">
             <div class="whatsnew-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
             <div>
-              <h3>Dramatically faster planning</h3>
+              <h3><span class="whatsnew-index">01</span>Dramatically faster planning</h3>
               <p>Plans substantially faster even on low-compute platforms, with smoother execution and nimbler obstacle
                 avoidance.</p>
             </div>
@@ -326,7 +404,7 @@
           <div class="whatsnew-item">
             <div class="whatsnew-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
             <div>
-              <h3>Upgraded VLM, bring your own model</h3>
+              <h3><span class="whatsnew-index">02</span>Upgraded VLM, bring your own model</h3>
               <p>Connect a more capable vision-language model to your own workstation for richer scene understanding.
               </p>
             </div>
@@ -335,7 +413,7 @@
           <div class="whatsnew-item">
             <div class="whatsnew-icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></div>
             <div>
-              <h3>Built for industrial inspection</h3>
+              <h3><span class="whatsnew-index">03</span>Built for industrial inspection</h3>
               <p>Extensive optimizations tuned to real industrial inspection scenarios and long patrol routes.</p>
             </div>
           </div>
@@ -343,7 +421,7 @@
           <div class="whatsnew-item">
             <div class="whatsnew-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
             <div>
-              <h3>End-to-end, fully open source</h3>
+              <h3><span class="whatsnew-index">04</span>End-to-end, fully open source</h3>
               <p>A complete inspection workflow — simulation to real robots, algorithms to the monitoring platform.
                 See the <a href="https://github.com/ManifoldTechLtd/MT-Real2Sim-Tutorial" target="_blank"
                   rel="noopener">Real2Sim tutorial</a>.
@@ -356,7 +434,7 @@
           <div class="whatsnew-item">
             <div class="whatsnew-icon"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i></div>
             <div>
-              <h3>Plugin architecture</h3>
+              <h3><span class="whatsnew-index">05</span>Plugin architecture</h3>
               <p>The stack is built around a plugin-based design, making it straightforward to integrate custom
                 planners.</p>
             </div>
@@ -423,6 +501,14 @@
                 margin: 0 0 0.5rem;
               }
 
+              .method-index {
+                margin-right: 0.5rem;
+                font-family: 'Noto Sans Mono', monospace;
+                font-size: 0.8em;
+                font-weight: 700;
+                color: #9aa5b1;
+              }
+
               .method-section ul {
                 display: inline-block;
                 text-align: left;
@@ -432,9 +518,9 @@
             <p class="method-intro">This project showcases multiple demo pipelines built on Odin1. Each demo can be used
               independently or combined as an integrated stack.</p>
 
-            <div class="method-section">
+            <div class="method-section" id="demo-slam">
               <div style="text-align:center;">
-                <h4>SLAM</h4>
+                <h4><span class="method-index">01</span>SLAM</h4>
               </div>
               <p>Build 3D maps for fast, persistent relocalization, providing positioning anchors for navigation.</p>
               <p style="color: #999999; font-size: 12px;">
@@ -505,9 +591,9 @@
               }
             </style>
 
-            <div class="method-section">
+            <div class="method-section" id="demo-navigation">
               <div style="text-align:center;">
-                <h4>Navigation</h4>
+                <h4><span class="method-index">02</span>Navigation</h4>
               </div>
             </div>
 
@@ -521,9 +607,9 @@
                 </iframe>
               </div>
             </div>
-            <div class="method-section">
+            <div class="method-section" id="demo-real2sim">
               <div style="text-align:center;">
-                <h4>Real-to-Isaac Sim Simulation Navigation</h4>
+                <h4><span class="method-index">03</span>Real2Sim Navigation</h4>
               </div>
               <p>Replicate real-world sites in Isaac Sim from <a href="https://www.manifoldtech.cn/products/q9000"
                   target="_blank" rel="noopener">Q9000</a> or <a href="https://www.manifoldtech.cn/products/odin1"
@@ -535,21 +621,21 @@
               <div class="hero-body">
                 <iframe id="R2SVideo" class="teaser-video" width="100%" style="aspect-ratio: 16 / 9;"
                   src="https://www.youtube.com/embed/S6x1iKUsrOA?autoplay=1&mute=1&loop=1&playlist=S6x1iKUsrOA"
-                  title="Real-to-Isaac Sim simulation navigation video" frameborder="0"
+                  title="Real2Sim navigation video" frameborder="0"
                   allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen>
                 </iframe>
                 <h2 class="subtitle" style="text-align: center;"></h2>
               </div>
             </div>
 
-            <div class="method-section">
+            <div class="method-section" id="demo-3dgs">
               <div style="text-align:center;">
-                <h4>Navigation in 3DGS Reconstructed Scenes</h4>
+                <h4><span class="method-index">04</span>Navigation in 3DGS Reconstructed Scenes</h4>
               </div>
               <p>Built from <a href="https://www.manifoldtech.cn/products/q9000" target="_blank"
-                  rel="noopener">Q9000</a>- or <a href="https://www.manifoldtech.cn/products/odin1" target="_blank"
-                  rel="noopener">Odin1</a>-scanned 3DGS maps, the ONS 2 dashboard also runs in photorealistic indoor
-                scenes: move the viewpoint freely and dispatch virtual robots to navigate.</p>
+                  rel="noopener">Q9000</a> scanned 3DGS maps, the ONS 2 dashboard also runs in photorealistic
+                reconstructed scenes: here a Go2 quadruped descends an outdoor staircase in simulation, with the
+                viewpoint free to move.</p>
             </div>
 
             <div class="container is-max-desktop">
@@ -561,7 +647,7 @@
                     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
                     padding: 1.25rem;
                     display: grid;
-                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    grid-template-columns: 1fr;
                     gap: 1.25rem;
                   }
 
@@ -580,20 +666,8 @@
                     font-style: normal;
                     color: #4a4a4a;
                   }
-
-                  @media (max-width: 768px) {
-                    .gs-video-card {
-                      grid-template-columns: 1fr;
-                    }
-                  }
                 </style>
                 <div class="gs-video-card">
-                  <figure class="gs-video-item" style="margin: 0;">
-                    <video autoplay muted loop playsinline>
-                      <source src="./resources/videos/3dgs-with-robo.mp4" type="video/mp4">
-                    </video>
-                    <figcaption>3DGS scene with virtual robot</figcaption>
-                  </figure>
                   <figure class="gs-video-item" style="margin: 0;">
                     <video autoplay muted loop playsinline>
                       <source src="./resources/videos/3dgs-with-go2.mp4" type="video/mp4">
