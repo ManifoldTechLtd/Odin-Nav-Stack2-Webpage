@@ -183,6 +183,7 @@
           justify-content: center;
           align-items: center;
           gap: 0.6rem;
+          margin-top: 1.5rem; 
           margin-bottom: 0.75rem;
         }
 
@@ -236,12 +237,23 @@
       <p class="ons2-intro">Built on the Odin1 (Odin's Eye) spatial memory module, ONS2 is an open-source, pluggable
         navigation stack for industrial inspection—covering mapping, localization, planning, and execution, with live
         3DGS monitoring dashboard.</p>
+
+      <div class="workflow-card">
+        <img class="workflow-arch-img" src="./resources/images/ons2_architecture.png"
+          alt="ONS2 system architecture: inputs and profile, perception backbone, pluggable planning stack, execution and ecosystem"
+          loading="lazy" decoding="async">
+      </div>
+      <p class="workflow-caption">Figure 1: ONS2 system architecture—unified robot profile, ego-centric perception,
+        pluggable planners, and execution ecosystem.</p>
+      <a class="workflow-open" href="./resources/images/ons2_architecture.png" target="_blank" rel="noopener">Open
+        full-size image ↗</a>
       <nav class="ons2-index" aria-label="ONS2 demos">
         <a href="#demo-slam"><span class="idx">01</span>SLAM</a>
         <a href="#demo-navigation"><span class="idx">02</span>Navigation</a>
         <a href="#demo-real2sim"><span class="idx">03</span>Real-to-Sim Navigation</a>
         <a href="#demo-3dgs"><span class="idx">04</span>3DGS Monitoring Dashboard</a>
       </nav>
+
     </div>
   </section>
 
@@ -779,20 +791,6 @@
         }
       </style>
 
-      <p class="workflow-intro">Inside ONS2, four layers stay decoupled: a unified robot profile, an ego-centric
-        perception backbone, a three-slot planning stack, and a chassis bridge with inspection tooling—all on a
-        symmetric ROS 1 / ROS 2 runtime.</p>
-      <div class="workflow-card">
-        <img class="workflow-arch-img" src="./resources/images/ons2_architecture.png"
-          alt="ONS2 system architecture: inputs and profile, perception backbone, pluggable planning stack, execution and ecosystem"
-          loading="lazy" decoding="async">
-      </div>
-      <p class="workflow-caption">Figure 2: ONS2 system architecture—unified robot profile, ego-centric perception,
-        pluggable planners, and execution ecosystem.</p>
-      <a class="workflow-open" href="./resources/images/ons2_architecture.png" target="_blank" rel="noopener">Open
-        full-size image ↗</a>
-      <h4 class="workflow-subhead">System Architecture</h4>
-
       <p class="workflow-intro">Q9000 (.lx) or Odin1 (.olx) captures the site; MindCloud exports three branches—navigation
         maps, a live 3DGS dashboard, and Isaac Sim scenes—for ONS2 navigation, monitoring, and validation.</p>
       <div class="workflow-card">
@@ -801,7 +799,7 @@
           <img src="./resources/images/q9000_workflow.svg"
             alt="ManifoldTech workflow diagram: mapping, navigation and simulation">
         </object>
-        <p class="workflow-caption">Figure 1: end-to-end workflow from site capture to ONS2 deployment.</p>
+        <p class="workflow-caption">Figure 2: end-to-end workflow from site capture to ONS2 deployment.</p>
         <a class="workflow-open" href="./resources/images/q9000_workflow.svg" target="_blank" rel="noopener">Open
           full-size diagram ↗</a>
       </div>
